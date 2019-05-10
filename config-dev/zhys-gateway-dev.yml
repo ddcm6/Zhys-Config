@@ -38,7 +38,7 @@ security:
   oauth2:
     client:
       client-id: zhys
-      client-secret: zhys
+      client-secret: zhys2019
     resource:
       jwt:
          key-uri: ${base.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
