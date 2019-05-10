@@ -3,15 +3,15 @@
 # 公共配置地址
 base:
   auth:
-    server: http://taroco-authentication-server:9001
+    server: http://zhys-authentication-server:9006
   mysql:
-    url: jdbc:mysql://taroco-mysql:3306
+    url: jdbc:mysql://zhys-mysql:3306
   redis:
-    host: taroco-redis
+    host: zhys-redis
     port: 6379
-    password: taroco!@#$
+    password: 
   zipkin:
-    url: http://taroco-zipkin:10003/
+    url: http://zhys-zipkin:10003/
 
 management:
   endpoints:
@@ -75,7 +75,7 @@ hystrix:
 ribbon:
   eager-load:
     enabled: true
-    clients: taroco-admin,taroco-rbac-service,taroco-authentication-server
+    clients: zhys-admin,zhys-rbac-service,zhys-authentication-server
   # ribbon请求连接的超时时间 默认2秒 ms
   ConnectTimeout: 5000
   # 请求处理的超时时间 默认5秒 ms
@@ -87,7 +87,7 @@ ribbon:
   # 切换实例的重试次数 默认1
   MaxAutoRetriesNextServer: 2
   # 自定义的ribbon负载均衡策略 默认com.netflix.loadbalancer.AvailabilityFilteringRule
-  NFLoadBalancerRuleClassName: cn.taroco.common.ribbon.XlabelWeightMetadataRule
+  NFLoadBalancerRuleClassName: com.zhys.common.ribbon.XlabelWeightMetadataRule
   # 从注册中心刷新servelist的时间 默认30秒 ms
   ServerListRefreshInterval: 15000
 

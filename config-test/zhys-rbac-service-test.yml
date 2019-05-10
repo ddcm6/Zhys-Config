@@ -3,14 +3,14 @@
 # jpa配置 数据源配置
 spring:
   datasource:
-    url: ${base.mysql.url}/taroco-oauth2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: ${base.mysql.url}/zhys-oauth2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
     username: root
-    password: taroco@1234
+    password: diandian
     driver-class-name: com.mysql.jdbc.Driver
     hikari:
       minimum-idle: 5
       maximum-pool-size: 20
-      pool-name: Taroco-OAuth2-HikariCP
+      pool-name: Zhys-OAuth2-HikariCP
   #redis配置
   redis:
     host: ${base.redis.host}
@@ -20,7 +20,7 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
-  typeAliasesPackage: cn.taroco.rbac.admin.model.entity
+  typeAliasesPackage: com.zhys.rbac.admin.po
   global-config:
     #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
     id-type: 0
@@ -36,20 +36,20 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     cache-enabled: true
 
-taroco:
+zhys:
   # swagger2配置
   swagger:
     enabled: true
-    title: Taroco权限管理(RBAC)
-    description: Taroco权限管理(RBAC) RestFull Api
-    version: 1.0.1-SNAPSHOT
+    title: 智慧云尚权限管理(RBAC)
+    description: 智慧云尚权限管理(RBAC) RestFull Api
+    version: 1.0.0
     license: Apache License, Version 2.0
     license-url: https://www.apache.org/licenses/LICENSE-2.0.html
-    terms-of-service-url: https://github.com/liuht777/Taroco
+    terms-of-service-url: http://www.smartysh.com
     contact:
-      name: liuht
-      url: https://github.com/liuht777
-      email: liuht777@qq.com
-    base-package: cn.taroco.rbac.admin.controller
+      name: zhys
+      url: http://www.smartysh.com
+      email: 1805945138@qq.com
+    base-package: com.zhys.rbac.admin.controller
     base-path: /**
     exclude-path: /error

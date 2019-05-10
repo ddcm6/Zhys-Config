@@ -3,9 +3,9 @@
 # jpa配置 数据源配置
 spring:
   datasource:
-    url: ${base.mysql.url}/taroco-oauth2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: ${base.mysql.url}/zhys-oauth2?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
     username: root
-    password: taroco@1234
+    password: diandian
     driver-class-name: com.mysql.jdbc.Driver
     hikari:
       minimum-idle: 5
@@ -33,12 +33,12 @@ spring:
     template-loader-path: classpath:/templates/
 
 # oauth2 配置
-taroco:
+zhys:
   oauth2:
     key-store:
-      location: classpath:taroco.jks
-      secret: taroco!@#$
-      alias: taroco
+      location: classpath:zhys.jks
+      secret: zhys!@#$
+      alias: zhys
     url-permit-all:
       - /actuator/**
       - /authentication/**

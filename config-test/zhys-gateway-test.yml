@@ -14,10 +14,10 @@ zuul:
   ignored-services: '*'
   # 需要聚合的swagger服务
   swagger:
-    serviceIds: taroco-rbac-service
+    serviceIds: zhys-rbac-service
   # 限流配置
   ratelimit:
-    key-prefix: taroco-gateway-ratelimit
+    key-prefix: zhys-gateway-ratelimit
     enabled: true
     repository: REDIS
     behind-proxy: true
@@ -38,14 +38,14 @@ security:
   sessions: stateless
   oauth2:
     client:
-      client-id: taroco
-      client-secret: taroco
+      client-id: zhys
+      client-secret: zhys
     resource:
       jwt:
          key-uri: ${base.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
 # oauth2 配置
-taroco:
+zhys:
   oauth2:
     url-permit-all:
       - /actuator/**
