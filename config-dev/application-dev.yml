@@ -3,7 +3,7 @@
 # 公共配置地址
 base:
   auth:
-    server: http://localhost:9006
+    server: http://localhost:9003
   mysql:
     url: jdbc:mysql://120.78.188.86:3306
   redis:
