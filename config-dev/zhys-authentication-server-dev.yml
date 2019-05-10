@@ -37,7 +37,7 @@ zhys:
   oauth2:
     key-store:
       location: classpath:zhys.jks
-      secret: zhys!@#$
+      secret: zhys2019
       alias: zhys
     url-permit-all:
       - /actuator/**
