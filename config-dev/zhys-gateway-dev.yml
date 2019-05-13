@@ -42,6 +42,7 @@ security:
     resource:
       jwt:
          key-uri: ${base.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
+         key-value: zhys
 
 # oauth2 配置
 zhys:
